@@ -31,35 +31,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Enable Corepack before setting up Node
-        run: corepack enable
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'yarn'
-          cache-dependency-path: './'
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Set Yarn Version
-        run: corepack prepare yarn@4.4.0 --activate
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload dist repository
+          # Upload dist directory
           path: './dist'
 
       - name: Deploy to GitHub Pages
