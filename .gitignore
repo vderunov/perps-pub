@@ -1,7 +1,6 @@
 **/node_modules
 
 **/build
-**/dist
 
 # testing
 **/coverage
@@ -48,7 +47,6 @@ pids
 **/.coverage_artifacts
 **/.coverage_cache
 **/.coverage_contracts
-**/dist
 **/node_modules
 
 staged-txns.txt
