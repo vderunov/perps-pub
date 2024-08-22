@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Simple workflow for deploying static content to Pages
 name: Deploy static content to Pages
 
 on:
@@ -40,6 +40,9 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
+
+      - name: Set Yarn Version
+        run: corepack prepare yarn@4.4.0 --activate
 
       - name: Install dependencies
         run: yarn install

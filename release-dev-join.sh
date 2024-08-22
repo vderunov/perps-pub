@@ -5,6 +5,8 @@ pushd .
 cd ~/WebstormProjects/arbitrum-lp/liquidity/ui
 export GIT_SHA=$(git log --pretty=format:"%h" --date=unix -1)
 
+echo "Start building the project..."
+
 yarn build
 
 rm -rf ~/WebstormProjects/perps-pub/dist
